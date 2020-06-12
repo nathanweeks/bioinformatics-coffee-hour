@@ -1,9 +1,0 @@
-channels:
-  - conda-forge
-  - bioconda
-  - defaults
-dependencies:
-  - bash_kernel
-  - bwa
-  - fastp
-  - samtools
