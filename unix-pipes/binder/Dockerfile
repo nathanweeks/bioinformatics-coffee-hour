@@ -7,4 +7,4 @@ RUN conda install -c conda-forge -c bioconda \
   samtools \
   && conda clean --all -f -y
 
-COPY --chown=${NB_USER} unix-pipes/ .
+COPY --chown=${NB_USER}:${NB_GID} unix-pipes/ .
