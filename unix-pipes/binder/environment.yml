@@ -7,3 +7,4 @@ dependencies:
   - bwa
   - fastp
   - samtools
+  - time
