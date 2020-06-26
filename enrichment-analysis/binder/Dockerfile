@@ -10,6 +10,6 @@ RUN install2.r statmod \
 # copy files
 COPY --chown=rstudio:rstudio ./differential-expression-analysis/data ${HOME}/data/
 COPY --chown=rstudio:rstudio ./enrichment-analysis/data ${HOME}/data/
-COPY --chown=rstudio:rstudio ./enrichment-analysis/index.Rmd ${HOME}/data/
+COPY --chown=rstudio:rstudio ./enrichment-analysis/index.Rmd ${HOME}
 
 USER rstudio
