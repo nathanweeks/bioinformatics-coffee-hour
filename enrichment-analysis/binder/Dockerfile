@@ -1,8 +1,5 @@
 FROM rocker/binder:4.0.0
 
-ARG NB_USER
-ARG NB_UID
-
 USER root
 
 # install dependencies
