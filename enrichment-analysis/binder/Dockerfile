@@ -8,10 +8,8 @@ RUN install2.r statmod \
   && rm -rf /tmp/downloaded_files
 
 # copy files
-COPY ./differential-expression-analysis/data ${HOME}/data/
-COPY ./enrichment-analysis/data ${HOME}/data/
-COPY ./enrichment-analysis/index.Rmd ${HOME}/data/
+COPY --chown=rstudio:rstudio ./differential-expression-analysis/data ${HOME}/data/
+COPY --chown=rstudio:rstudio ./enrichment-analysis/data ${HOME}/data/
+COPY --chown=rstudio:rstudio ./enrichment-analysis/index.Rmd ${HOME}/data/
 
-RUN chown -R ${NB_USER} ${HOME}
-
-USER ${NB_USER}
+USER rstudio
