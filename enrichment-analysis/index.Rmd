@@ -97,7 +97,7 @@ II. Running Camera
 
 13. load table of KEGG-classfied MAPK pathway genes
 ```{r}
-mapk<-read.table("dme_mapk_ensembl_geneids.txt",header=TRUE)
+mapk<-read.table("data/dme_mapk_ensembl_geneids.txt",header=TRUE)
 head(mapk)
 ```
 
@@ -131,7 +131,7 @@ With either cameraPR, or camera, if you provide multiple gene sets, an FDR value
 
 17. Load the heat shock proteins table
 ```{r,echo=TRUE}
-hsps<-read.table("heatshockprotein_ensembl_gene_ids.txt",header=TRUE)
+hsps<-read.table("data/heatshockprotein_ensembl_gene_ids.txt",header=TRUE)
 ```
 
 18. Create heat shock protein indices
