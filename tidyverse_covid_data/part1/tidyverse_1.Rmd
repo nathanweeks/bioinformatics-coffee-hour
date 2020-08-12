@@ -27,7 +27,7 @@ For these next two workshops on tidyverse, we will grab data from different sour
 
 Let's load in the first data set on mask usage in the US, recently provided by the New York Times. Let's take a peek at the raw file to get an idea of what it looks like using the head command on terminal. As you can see, it looks like a bunch of information separated by commas. Let's read in these data with the read_delim() function and let R know that our data are separated, or delimited, by commas.
 ```{r}
-mask_use <- read_delim(file="mask-use-by-county.csv", delim=",")
+mask_use <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/bde13b021e99c6b4a63fb66a6144e889cc635e31/mask-use/mask-use-by-county.csv", delim=",")
 mask_use
 ```
 
@@ -87,7 +87,7 @@ mask_use_long <- mask_use %>%
 
 In addition to the mask data, let's also load in data on covid19 case counts across the US, also supplied by the NYT, and combine it with our mask use data. Unlike the previous data that we loaded in from our local file system, these data we will directly download because they are so large. This will also show how you can specify web addresses instead of file names for read_delim(). This file is also comma separated, so we will let read_delim() know this.
 ```{r, include=FALSE}
-cases <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/master/us-counties.csv", delim=",") %>%
+cases <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/ccc8c7988a089fed287a9005e5335d8716d8db57/us-counties.csv", delim=",") %>%
   arrange(fips)
 ```
 

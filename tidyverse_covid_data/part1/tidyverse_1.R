@@ -15,7 +15,7 @@ library(tidyverse)
 
 
 # load data using read_delim() function, which crates a tibble.
-mask_use <- read_delim(file="mask-use-by-county.csv", delim=",")
+mask_use <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/bde13b021e99c6b4a63fb66a6144e889cc635e31/mask-use/mask-use-by-county.csv", delim=",")
 mask_use
 
 
@@ -49,7 +49,7 @@ mask_use_long <- mask_use %>%
   arrange(fips)
 
 # Let's load in case count data, also from NYT github repository
-cases <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/master/us-counties.csv", delim=",") %>%
+cases <- read_delim(file="https://github.com/nytimes/covid-19-data/raw/ccc8c7988a089fed287a9005e5335d8716d8db57/us-counties.csv", delim=",") %>%
   arrange(fips)
 
 # too much data! let's look at a particular date, August 3rd, by selecting rows using the filter() function
